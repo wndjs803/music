@@ -1,6 +1,13 @@
-#include <iostream>
+#include "linkedlist.h"
+#include "textfilewriter.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    int songNumber;
+    char* songName;
+    int cmdNumber;
+    char cmd[5];
+
+    while (true){
+        scanf("%s", cmd);
+    }
 }
