@@ -5,7 +5,8 @@ static Node* _tail = NULL;
 static Node* _cur_node = NULL;
 
 bool empty() {
-			
+	if(ptr->next == NULL)	return false;
+	else return true;			
 }
 
 size_t size() {
@@ -57,9 +58,9 @@ Node* last() {
 }
 
 Node* next() {
-	
+	return Node->next;
 }
 
 Node* prev() {
-	
+	return Node->prev;
 }
