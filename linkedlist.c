@@ -1,16 +1,28 @@
-Node* prev();= NULL;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+#include "linkedlist.h"
+
+static Node* _head = NULL;
 static Node* _tail = NULL;
-
 static Node* _cur_node = NULL;
 
 bool empty() {
-	if(ptr->next == NULL)	return false;
-	else return true;			
+	if(_cur_node == NULL)	return true;
+	else return false;
 }
 
 size_t size() {
-	
+	Node* ptr;
+	ptr = _head;
+	ptr = ptr->next;
+	int count=0;
+	while(ptr != NULL) {
+			ptr = ptr->next;
+			count++;
+		}
+	return count;
 }
 
 void print() {
@@ -37,7 +49,7 @@ Node* append(size_t n, char new_data[n]) {
 	
 }
 
-Node* delete_node(Node* cur_node) {
+Node* delete_node(Node* _cur_node) {
 	
 }
 
@@ -58,9 +70,9 @@ Node* last() {
 }
 
 Node* next() {
-	return Node->next;
+	return _cur_node->next;
 }
 
 Node* prev() {
-	return Node->prev;
+	return _cur_node->prev;
 }
