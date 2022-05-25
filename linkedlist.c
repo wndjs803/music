@@ -51,9 +51,10 @@ Node* append_left(size_t n, char new_data[n]) {
     if(empty()) {
         _head->next = new_node;
         new_node->prev = _head->next;
-        new_node->next = tail;
+        new_node->next = _tail;
         new_node->data = new_data[n];
         _tail->prev = new_node;
+	return new_node;
     }
 
     last()->next = new_node;
@@ -76,9 +77,10 @@ Node* append(size_t n, char new_data[n]) {
     if(empty()) {
         _head->next = new_node;
         new_node->prev = _head->next;
-        new_node->next = tail;
+        new_node->next = _tail;
         new_node->data = new_data[n];
         _tail->prev = new_node;
+	return new_node;
     }
 
     first()->prev = new_node;
